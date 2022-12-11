@@ -22,9 +22,9 @@ int Prompt(string message)
     return answer;
 }
 
-int [,] GenerateMatrix (int rows, int columns, int minRange, int maxRange)
+int [,] GenerateSquareMatrix (int rowsColumns, int minRange, int maxRange)
 {
-    int [,] array = new int [rows, columns];
+    int [,] array = new int [rowsColumns, rowsColumns];
     for (int i = 0; i < array.GetLength(0); i++)
         {
             for (int j = 0; j < array.GetLength(1); j++)
@@ -51,12 +51,11 @@ int CountMainDiag (int [,] array)
     return sumMainDiag;
 }
 
-int rowsInput = Prompt("Введите количество строк массива");
-int columnsInput = Prompt("Введите количество столбцов массива");
+int rowsColumnsInput = Prompt("Введите количество строк/столбцов массива");
 int min = Prompt("Введите минимальное значение для ячеек массива");
 int max = Prompt("Введите максимальное значение для ячеек массива");
 
-int [,] newMatrix = GenerateMatrix(rowsInput, columnsInput, min, max);
+int [,] newMatrix = GenerateSquareMatrix(rowsColumnsInput, min, max);
 PrintMatrix (newMatrix);
 Console.WriteLine();
 Console.WriteLine($"Сумма чисел главной диагонали массива - {CountMainDiag(newMatrix)}");
