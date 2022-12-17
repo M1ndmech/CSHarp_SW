@@ -51,7 +51,6 @@ int [,] GenerateMatrix (int rows, int columns, int minRange, int maxRange)
     return (minI, minJ);
 }
 
-
 int [,] OmitMinElementRows(int [,] array, int minI, int minJ)
 {
     int [,] newMatrix = new int [array.GetLength(0) - 1, array.GetLength(1) - 1];
@@ -71,7 +70,6 @@ int [,] OmitMinElementRows(int [,] array, int minI, int minJ)
     }
     return newMatrix;
 }
-
 
 int rowsInput = Prompt("Введите количество строк массива");
 int columnsInput = Prompt("Введите количество столбцов массива");
