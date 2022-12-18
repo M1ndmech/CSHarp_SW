@@ -29,27 +29,29 @@ int [] GenArray (int length, int minRange, int maxRange)
     return array;
 }
 
-void Swap1 (int [] array, int i1, int i2)
-{
-    int temp = array [i1];
-    array[i1] = array [i2];
-    array [i2] = temp;
-}
+// void Swap1 (int [] array, int i1, int i2)
+// {
+//     int temp = array [i1];
+//     array [i1] = array [i2];
+//     array [i2] = temp;
+// }
 
-void Swap2 (int[] array, int i1, int i2)
-{
-    (array[i1], array[i2]) = (array[i2], array[i1]);
-}
+// void Swap2 (int[] array, int i1, int i2)
+// {
+//     (array[i1], array[i2]) = (array[i2], array[i1]);
+// }
 
 
-int ArrayReverse (int [] array)
-{
-    for (int i = 0; i < array.Length / 2; i++)
-    {
-        Swap1(array, i, array.Length - 1 - i);
-    }
-    return array;
-}
+// int ArrayReverse (int [] array)
+// {
+//     for (int i = 0; i < array.Length / 2; i++)
+//     {
+//         Swap1(array, i, array.Length - 1 - i);
+//     }
+//     return array;
+// }
+
+// пересмотреть
 
 int Range = Prompt("Введите длину массива ");
 int minValue = Prompt("Введите минимальное значение массива");
